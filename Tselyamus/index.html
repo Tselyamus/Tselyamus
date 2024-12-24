@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tselyamus NFT Marketplace</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1 class="title">Tselyamus NFT Marketplace</h1>
+        <nav>
+            <button onclick="showTab('home')">Главная</button>
+            <button onclick="showTab('catalog')">Каталог</button>
+            <button onclick="showTab('profile')">Профиль</button>
+            <button onclick="showTab('events')">События</button>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Главная -->
+        <section id="home" class="tab">
+            <h2>Добро пожаловать на Tselyamus</h2>
+            <p>Исследуйте мир уникальных цифровых токенов.</p>
+            <div id="recommendations">
+                <h3>Рекомендуемые NFT</h3>
+                <div class="recommendation-gallery"></div>
+            </div>
+        </section>
+
+        <!-- Каталог -->
+        <section id="catalog" class="tab" style="display: none;">
+            <h2>Каталог NFT</h2>
+            <div id="filter">
+                <input type="text" id="search" placeholder="Поиск по названию..." oninput="filterNFTs()">
+                <input type="number" id="price-filter" placeholder="Макс. цена" oninput="filterNFTs()">
+            </div>
+            <div class="nft-gallery"></div>
+        </section>
+
+        <!-- Профиль -->
+        <section id="profile" class="tab" style="display: none;">
+            <h2>Ваш профиль</h2>
+            <p>Имя пользователя: <span id="username-display">Гость</span></p>
+            <button onclick="editProfile()">Редактировать профиль</button>
+            <div id="transaction-history">
+                <h3>История транзакций</h3>
+                <ul></ul>
+            </div>
+        </section>
+
+        <!-- События -->
+        <section id="events" class="tab" style="display: none;">
+            <h2>События</h2>
+            <p>Участвуйте в наших специальных предложениях.</p>
+            <div id="event-list">
+                <div class="event">
+                    <h3>Флэш-продажа NFT</h3>
+                    <p>Скидка до 50% только сегодня!</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Tselyamus NFT Marketplace. Все права защищены.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

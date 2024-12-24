@@ -1,0 +1,66 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #1f1f1f, #121212);
+    color: #f0f0f0;
+}
+
+header {
+    background-color: #20232a;
+    padding: 20px;
+    text-align: center;
+    color: #61dafb;
+}
+
+header h1.title {
+    font-size: 32px;
+    margin: 0;
+}
+
+nav button {
+    margin: 5px;
+    padding: 10px;
+    background: #333;
+    color: #f0f0f0;
+    border: 2px solid #61dafb;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+nav button:hover {
+    background: #61dafb;
+    color: #000;
+}
+
+.tab {
+    padding: 20px;
+    text-align: center;
+}
+
+.nft-gallery, .recommendation-gallery {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.nft-item, .recommendation-item {
+    background: #282c34;
+    border: 2px solid #61dafb;
+    padding: 15px;
+    border-radius: 10px;
+    color: #f0f0f0;
+    transition: transform 0.2s;
+}
+
+.nft-item:hover, .recommendation-item:hover {
+    transform: scale(1.05);
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #20232a;
+    color: #61dafb;
+}
